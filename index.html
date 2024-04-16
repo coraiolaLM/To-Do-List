@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- css externo -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="icon.png">
+    <title>To-Do-List</title>
+    <!-- fonte importada -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"/>
+  </head>
+
+  <body>
+    <!-- titulo -->
+    <h2 class="tituloP">⇾Lista de Tarefas</h2>
+    <!-- definindo section de lista de tarefa -->
+    <section class="section">
+     <!--caixa de inserir tarefa com ouvinte para função adicionartarefanalista-->
+<input type="text" id="input_nova_tarefa" class="caixadetarefa" onkeydown="if(event.key === 'Enter') adicionaTarefaNaLista()" />
+
+<!--botão de adicionar tarefa na lista-->
+<button onclick="adicionaTarefaNaLista()" class="mais">+</button>
+      <!-- lista de tarefa -->
+      <div id="div_lista_de_tarefas">
+      <ul id="lista_de_tarefas"></ul>
+
+    </section>
+
+    <!-- botão de remover itens selecionados  -->
+    <button onclick="removerItensSelecionados()" class="removeitens">Remover Itens</button>
+      
+    <button onclick="ocultarItensSelecionados()" class="removeitens">Ocultar</button>
+
+    <button onclick="desocultarTodosItens()" class="removeitens">Revelar itens ocultados</button>
+
+    <!-- js externo -->
+    <script src="app.js"></script>
+  </body>
+
+</html>
